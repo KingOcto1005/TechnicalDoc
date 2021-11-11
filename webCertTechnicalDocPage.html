@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Technical Documentation Page
+    </title>
+
+    <style>
+
+        body {
+            background-color:rgb(29, 157, 140);
+        }
+
+        main{
+            width: 100%;
+            
+        }
+        header {
+            text-align: center;
+            
+
+
+            
+            
+        }
+
+
+        p {
+            float: left;
+            
+
+        }
+
+        #components {
+            line-height: 25px;
+        }
+
+
+
+        h1 {
+            font-size: 35px;
+            padding-top: 20px;
+            color: navy;
+            background-color: rgb(33, 245, 174);
+            padding-bottom: 20px;
+            margin-bottom: 0;
+            margin-top: 0;
+            
+            
+            width: 100%;
+
+        }
+
+        nav {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            bottom: 0;
+            width: 50%;
+            left: 0;
+            background-color:rgb(25, 197, 140);
+            
+
+
+            
+        }
+
+        #nav-list{
+            float: left;
+            display: flex;
+            bottom: 0;
+            justify-content:space-evenly;
+            background-color:rgb(25, 197, 140);
+            padding: 5px;
+            margin-bottom:0;
+            margin-top: 0;
+            
+            height: 100%;
+            width: 100%;
+            margin-right: 0;
+            list-style-type: none;
+        }
+
+
+        #link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        a {
+            color: rgb(105, 2, 105);
+            font-size: 17px;
+            padding: 6px;
+
+
+        }
+
+        a:visited {
+            color: rgb(1, 1, 65)
+        }
+
+        a:hover{
+            font-size: 19px;
+        }
+
+
+        code {
+            background-color: rgb(39, 38, 38);
+            color: yellow;
+            padding: 5px;
+            
+
+
+
+        }
+
+        h2{
+            padding: 25px;
+            height: 100%;
+            
+        }
+
+        #code{
+            display: flex;
+            flex-direction: column;
+            margin-right: 2em;
+            width: 40%;
+        }
+
+        #code:hover {
+            width: 50%;
+        }
+
+
+
+
+
+        #Prerequisites, #Example_application_start, #Create_the_product_list, #Pass_data_to_a_child_component, #Pass_data_to_a_parent_component, #Restart_Browser{
+
+            align-items: center;
+            display: flex;
+            padding-right: 10px;
+
+
+            
+        }
+
+        #java{
+            margin-right: 10px;
+            margin-left: 30px;
+            padding-right: 1px;
+            line-height: 32px;
+            
+            
+        }
+
+        #Prerequisites, #Create_the_product_list, #Pass_data_to_a_parent_component{
+            background-color: rgb(126, 19, 226);
+            color:bisque;
+        }
+
+        #Example_application_start, #Pass_data_to_a_child_component, #Restart_Browser{
+            background-color: rgb(99, 14, 179);
+            color: rgb(124, 248, 124)
+        }
+
+        p:hover, li:hover{
+            font-size: 20px;
+
+
+            
+        }
+
+
+        #listy {
+
+            padding: 5px;
+        }
+
+        #listy2 {
+
+            padding: 12px;
+            line-height: 1.7em;
+            
+        }
+
+
+
+
+
+        @media(max-width: 1138px) {
+
+            code {
+                width: 100%;
+                margin-right: 2em;
+                flex-shrink: 5;
+            }
+            #code{
+                display: flex;
+                flex-direction: column;
+                float: left;
+                margin-right: 2em;
+                width: 100%;
+                font-size: 11px;
+                margin-right: 2em;
+                padding: 10px;
+                
+            }
+
+            #code:hover {
+                width: 30%;
+            }
+
+            section {
+                width: 100%
+            }
+        }
+
+        #decorator {
+
+            color: red;
+            background-color: antiquewhite;
+        }
+
+        #import {
+            color: rgb(3, 92, 3);
+            background-color: antiquewhite;
+        }
+
+        #method {
+
+            color: navy;
+            background-color: antiquewhite;
+
+        }
+
+        #selector {
+            color: rgb(0, 174, 255);
+        }
+
+        #compon {
+            color: orange;
+        }
+
+        #interface {
+            color:black;
+            background-color: antiquewhite;
+        }
+
+        #element {
+            color: white;
+        }
+
+        #event {
+
+            color: rgb(155, 0, 155);
+            background-color: antiquewhite;
+
+        }
+
+        #directive {
+            color:rgb(253, 0, 198);
+            background-color: antiquewhite;
+        }
+
+        #syntax {
+            color: silver;
+        }
+
+        #statement {
+
+            color: rgb(85, 255, 255);
+
+        }
+
+        #pheader {
+
+            background-color: rgb(74, 7, 138);
+            
+            width: 15%;
+            border-right: 1px solid black;
+            
+        }
+
+        section {
+            border: 1px solid black;
+            display: flex;
+           
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+        <nav id="navbar">
+            <header id="theheader">
+                <h1>Angular Setup</h1>
+            </header>
+            <ul id="nav-list">
+                <a href="#Prerequisites" class="nav-link">
+                    <li id="link">
+                        <b>Prerequisites</b>
+                    </li>
+                </a>
+                <br>
+                <a href="#Example_application_start" class="nav-link">
+                    <li id="link">
+                        Example Application Start
+                    </li>
+                </a>
+                <br>
+                <a href="#Create_the_product_list" class="nav-link">
+                    <li id="link">
+                        Create the product list
+                    </li>
+                </a>
+                <br>
+                <a href="#Pass_data_to_a_child_component" class="nav-link">
+                    <li id="link">
+                        Pass data to a child component
+                    </li>
+                </a>
+                <br>
+                <a href="#Pass_data_to_a_parent_component" class="nav-link">
+                    <li id="link">
+                        Pass data to a parent component
+                    </li>
+                </a>
+                <br>
+            </ul>
+        </nav>
+
+    <main id="main-doc">
+        <section 
+        id="Prerequisites"
+        class="main-section">
+            <header id="pheader"><h2><em>Prerequisites</em></h2></header>
+
+
+
+            <p id="java">To get the most out of this tutorial you should already have a basic understanding of the following:</p>
+             <p>
+                 <ul>
+                     <li>HTML</li>
+                     <li>JavaScript</li>
+                     <li>TypeScript</li>
+                    </ul>
+                </p>
+
+        </section>
+
+        
+
+        <section 
+        id="Example_application_start" 
+        class="main-section">
+            <header id="pheader">
+                <h2>
+                    <em>
+                        Example application start
+                    </em>
+                </h2>
+            </header>
+
+            <p id="java">
+                You build Angular applications with components. Components define areas of responsibility in the UI that let you reuse sets of UI functionality.
+                <br>
+                <br>
+                <ul >
+                    <h4>A component consists of three things:</h4>
+                    <li id="listy">
+                        <strong>A<em> component class</em></strong> that handles data and functionality
+                    </li>
+                    <li id="listy">
+                        <strong>An<em> HTML template</em></strong> that determines the UI
+                    </li>
+                    <li id="listy">
+                        <strong><em>Component-specific styles</em></strong> that define the look and feel
+                    </li>
+                </ul>
+        </p>
+            <p id="java">
+                <ul id="components">
+                    <h4>This guide demonstrates building an application with the following components:</h4>
+                    <li id="listy">
+                        <code id="selector">app-root</code> - the first component to load and the container for the other components
+                    </li>
+                    <li id="listy">
+                        <code id="selector">app-top-bar</code> - the store name and checkout button
+                    </li>
+                    <li id="listy">
+                        <code id="selector">app-product-list</code> - the product list
+                    </li>
+                    <li id="listy">
+                        <code id="selector">app-product-alerts</code> - a component that contains the application's alerts
+                    </li>
+                </ul>
+            </p>
+        </section>
+
+        <section 
+        id="Create_the_product_list"
+        class="main-section">
+            <header id="pheader">
+                <h2>
+                    <em>
+                        Create the product list
+                    </em>
+                </h2>
+            </header>
+
+            <p id="java">
+                In this section, you'll update the application to display a list of products. You'll use predefined product data from the products.ts file and methods from the <code>product-list.component.ts</code> file. This section guides you through editing the HTML, also known as the template.
+            </p>
+            <p id="java">
+                <ol>
+                    <li id="listy2">
+                        In the <code>product-list</code> folder, open the template file <code>product-list.component.html</code>.
+                    </li>
+                    <li id="listy2">Add an <code id="directive">*ngFor</code> structural directive on a <code id="element">div</code>, as follows:
+                        <br>
+                        With <code id="directive">*ngFor</code>, the <code id="element">div</code> repeats for each product in the list. Structural directives shape or reshape the DOM's structure, by adding, removing, and manipulating elements. For more information about structural directives, see <a href="#">Structural directives</a>.
+                    </li>
+                    <li id="listy2">
+                        Inside the <code id="element">div</code>, add an <code id="element">h3</code> and <code id="statement">{{ product.name }}</code>. The <code id="statement">{{ product.name }}</code> statement is an example of Angular's interpolation syntax. Interpolation <code id="syntax">{{ }}</code> lets you render the property value as text.
+                    </li>
+                    <br>
+                    The preview pane updates to display the name of each product in the list.
+                    <br>
+                    <li id="listy2">
+                        To make each product name a link to product details, add the <code id="element">a</code> element around <code id="statement">{{ product.name }}</code>.
+                    </li>
+                    <li id="listy2">
+                        Set the title to be the product's name by using the property binding <code id="syntax">[ ]</code> syntax, as follows:
+                    </li>
+                    <li id="listy2">
+                        In the preview pane, hover over a product name to see the bound name property value, which is the product name plus the word "details". Property binding <code id="syntax">[ ]</code> lets you use the property value in a template expression.
+                    </li>
+                    <li id="listy2">
+                        Add the product descriptions. On a <code id="element">p</code> element, use an <code id="directive">*ngIf</code> directive so that Angular only creates the <code id="element">p</code> element if the current product has a description. The application now displays the name and description of each product in the list. Notice that the final product does not have a description paragraph. Angular doesn't create the <code id="element">p</code> element because the product's description property is empty.
+                    </li>
+                    <li id="listy2">
+                        Add a button so users can share a product. Bind the button's click event to the <code id="method">share()</code> method in <code>product-list.component.ts</code>. Event binding uses a set of parentheses, <code id="syntax">( )</code>, around the event, as in the <code id="event">(click)</code> event on the <code id="element">button</code> element.
+                    </li>
+                    <br>
+                    <ul>
+                        <li>
+                            Each product now has a <strong>Share</strong> button.
+                        </li>
+                        <li>
+                            Clicking the <strong>Share</strong> button triggers an alert that states, "The product has been shared!".
+                        </li>
+                        <li>
+                            In editing the template, you have explored some of the most popular features of Angular templates. For more information, see <a href="#">Introduction to components and templates</a>.
+                        </li>
+                    </ul>
+
+                </ol>
+            </p>
+
+        </section>
+
+        <section 
+        id="Pass_data_to_a_child_component"
+        class="main-section">
+            <header id="pheader">
+                <h2>
+                    <em>
+                        Pass data to a child component
+                    </em>
+                </h2>
+            </header>
+
+            <p id="java">
+                Currently, the product list displays the name and description of each product. The <code id="compon">ProductListComponent</code> also defines a products property that contains imported data for each product from the products array in <code>products.ts</code>.</p>
+            <p id="java">
+                The next step is to create a new alert feature that uses product data from the <code id="compon">ProductListComponent</code>. The alert checks the product's price, and, if the price is greater than $700, displays a <strong>Notify Me</strong> button that lets users sign up for notifications when the product goes on sale.
+                </p>
+            <p id="java">
+                This section walks you through creating a child component, <code id="compon">ProductAlertsComponent</code> that can receive data from its parent component, <code id="compon">ProductListComponent</code>.
+                </p>
+            <p id="java">
+                <ol>
+                    <li id="listy2">
+                        Click on the plus sign above the current terminal to create a new terminal to run the command to generate the component.
+                    </li>
+                    <li id="listy2">
+                        In the new terminal, generate a new component named <code>product-alerts</code> by running the following command: 
+                        <br>
+                        <code id="command">ng generate component product-alerts</code>
+                        <br>
+                        The generator creates starter files for the three parts of the component:<br>
+                        <ul>
+                            <li id="listy2">
+                                <code>product-alerts.component.ts</code>
+                            </li>
+                            <li id="listy2">
+                                <code>product-alerts.component.html</code>
+                            </li>
+                            <li id="listy2">
+                                <code>product-alerts.component.css</code>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                    <li id="listy2">
+                        Open <code>product-alerts.component.ts</code>. The <code id="decorator">@Component()</code> decorator indicates that the following class is a component. <code id="decorator">@Component()</code> also provides metadata about the component, including its selector, templates, and styles.
+                    </li>
+                    <br>
+                    Key features in the <code id="decorator">@Component()</code> are as follows:
+                    <ul>
+                        <li id="listy2">
+                            The <code id="selector">selector</code>, <code id="selector">app-product-alerts</code>, identifies the component. By convention, Angular component selectors begin with the prefix <code id="selector">app-</code>, followed by the component name.
+                        </li>
+                        <li id="listy2">
+                            The template and style filenames reference the component's HTML and CSS
+                        </li>
+                        <li id="listy2">
+                            The <code id="decorator">@Component()</code> definition also exports the class, <code id="compon">ProductAlertsComponent</code>, which handles functionality for the component.
+                        </li>
+                    </ul>
+                    <li id="listy2">
+                        To set up <code id="compon">ProductAlertsComponent</code> to receive product data, first import <em><strong>Input</strong></em> from <code id="import">@angular/core</code>.
+                    </li>
+                    <li id="listy2">
+                        In the <code>ProductAlertsComponent</code> class definition, define a property named product with an <code id="decorator">@Input()</code> decorator. The <code id="decorator">@Input()</code> decorator indicates that the property value passes in from the component's parent, <code id="compon">ProductListComponent</code>.
+                    </li>
+                    <li id="listy2">
+                        Open <code>product-alerts.component.html</code> and replace the placeholder paragraph with a <strong>Notify Me</strong> button that appears if the product price is over $700.
+                    </li>
+                    <li id="listy2">
+                        The generator automatically added the <code id="compon">ProductAlertsComponent</code> to the <code id="module">AppModule</code> to make it available to other components in the application.
+                    </li>
+                    <li id="listy2">
+                        Finally, to display <code id="compon">ProductAlertsComponent</code> as a child of <code id="compon">ProductListComponent</code>, add the <code id="selector">app-product-alerts</code> element to <code>product-list.component.html</code>. Pass the current product as input to the component using property binding.
+                    </li>
+                        <ul>
+                            <li id="listy2">
+                                The new product alert component takes a product as input from the product list. With that input, it shows or hides the <strong>Notify Me</strong> button, based on the price of the product. The Phone XL price is over $700, so the <strong>Notify Me</strong> button appears on that product.
+                            </li>
+                        </ul>
+
+                </ol>
+            </p>
+
+        </section>
+
+        <section 
+        id="Pass_data_to_a_parent_component"
+        class="main-section">
+            <header id="pheader">
+                <h2>
+                    <em>
+                        Pass data to a parent component
+                    </em>
+                </h2>
+            </header>
+
+            <p id="java">To make the <strong>Notify Me</strong> button work, the child component needs to notify and pass the data to the parent component. The <code id="compon">ProductAlertsComponent</code> needs to emit an event when the user clicks <strong>Notify Me</strong> and the <code id="compon">ProductListComponent</code> needs to respond to the event. 
+            </p>
+            <p id="java">
+                <li id="listy2">
+                    In new components, the Angular Generator includes an empty <code>constructor()</code>, the <code id="interface">OnInit</code> interface, and the <code id="method">ngOnInit()</code> method. Since these steps don't use them, the following code examples omit them for brevity.
+                </li>
+            </p>
+            <p id="java">
+                <ol>
+                    <li id="listy2">
+                        In <code>product-alerts.component.ts</code>, import <code id="import">Output</code> and <code id="import">EventEmitter</code> from <code id="import">@angular/core</code>.
+                    </li>
+                    <li id="listy2">
+                        In the component class, define a property named <code id="property">notify</code> with an <code id="decorator">@Output()</code> decorator and an instance of <code id="event">EventEmitter()</code>. Configuring <code id="compon">ProductAlertsComponent</code> with an <code id="decorator">@Output()</code> allows the <code id="compon">ProductAlertsComponent</code> to emit an event when the value of the <code id="property">notify</code> property changes.
+                    </li>
+                    <li id="listy2">
+                        In <code>product-alerts.component.html</code>, update the <strong>Notify Me</strong> button with an event binding to call the <code id="method">notify.emit()</code> method.
+                    </li>
+                    <li id="listy2">
+                        Define the behavior that happens when the user clicks the button. The parent, <code id="compon">ProductListComponent</code>—not the <code id="compon">ProductAlertsComponent</code>—acts when the child raises the event. In <code>product-list.component.ts</code>, define an <code id="method">onNotify()</code> method, similar to the <code id="method">share()</code> method.
+                    </li>
+                    <li id="listy2">
+                        Update the <code id="compon">ProductListComponent</code> to receive data from the <code id="compon">ProductAlertsComponent</code>. In <code id="compon">product-list.component.html</code>, bind <code id="selector">app-product-alerts</code> to the <code id="method">onNotify()</code> method of the product list component. <code id="selector">app-product-alerts</code> is what displays the <strong>Notify Me</strong> button.
+                    </li>
+                    <li id="listy2">
+                        Click the <strong>Notify Me</strong> button to trigger an alert which reads, "You will be notified when the product goes on sale".
+                    </li>
+
+                    For more information on communication between components, see <a href="#">Component Interaction</a>.
+                </ol>
+            </p>
+        </section>
+
+    </main>
+</body>
+</html>
