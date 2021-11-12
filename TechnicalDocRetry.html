@@ -238,9 +238,38 @@
                 <header>
                     <h2>Pass data to a parent component</h2>
                 </header>
-                
-
+                <p>
+                    To make the <strong>Notify Me</strong> button work, the child component needs to notify and pass the data to the parent component. The <code class="component-name">ProductAlertsComponent</code> needs to emit an event when the user clicks <strong>Notify Me</strong> and the <code class="component-name">ProductListComponent</code> needs to respond to the event. 
+                </p>
+                <ul>
+                    <li>
+                        In new components, the Angular Generator includes an empty <code class="constructor">constructor()</code>, the <code class="interface">OnInit</code> interface, and the <code class="method">ngOnInit()</code> method. Since these steps don't use them, the following code examples omit them for brevity.
+                    </li>
+                </ul>
+                    <ol>
+                        <li>
+                            In <code>product-alerts.component.ts</code>, import <code class="import">Output</code> and <code class="import">EventEmitter</code> from <code class="import">@angular/core</code>.
+                        </li>
+                        <li>
+                            In the component class, define a property named <code class="property">notify</code> with an <code class="decorator">@Output()</code> decorator and an instance of <code class="event">EventEmitter()</code>. Configuring <code class="component-name">ProductAlertsComponent</code> with an <code class="decorator">@Output()</code> allows the <code class="component-name">ProductAlertsComponent</code> to emit an event when the value of the <code class="property">notify</code> property changes.
+                        </li>
+                        <li>
+                            In <code>product-alerts.component.html</code>, update the <strong>Notify Me</strong> button with an event binding to call the <code class="method">notify.emit()</code> method.
+                        </li>
+                        <li>
+                            Define the behavior that happens when the user clicks the button. The parent, <code class="component-name">ProductListComponent</code>—not the <code class="component-name">ProductAlertsComponent</code>—acts when the child raises the event. In <code>product-list.component.ts</code>, define an <code class="method">onNotify()</code> method, similar to the <code class="method">share()</code> method.
+                        </li>
+                        <li>
+                            Update the <code class="compon">ProductListComponent</code> to receive data from the <code class="compon">ProductAlertsComponent</code>. In <code>product-list.component.html</code>, bind <code class="selector">app-product-alerts</code> to the <code class="method">onNotify()</code> method of the product list component. <code class="selector">app-product-alerts</code> is what displays the <strong>Notify Me</strong> button.
+                        </li>
+                        <li>
+                            Click the <strong>Notify Me</strong> button to trigger an alert which reads, "You will be notified when the product goes on sale".
+                        </li>
+                    </ol>
             </section>
         </main>
+        <footer>
+            For more information on communication between components, see <a href="#">Component Interaction</a>.
+        </footer>
     </body>
 </html>
