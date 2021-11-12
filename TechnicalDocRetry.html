@@ -83,6 +83,23 @@
                 <header>
                     <h2>Example application start</h2>
                 </header>
+                <p>
+                    You build Angular applications with components. Components define areas of responsibility in the UI that let you reuse sets of UI functionality.
+                </p>
+                    <ul >
+                        <li class="list_header">
+                            A component consists of three things:
+                        </li>
+                        <li>
+                            <strong>A<em> component class</em></strong> that handles data and functionality
+                        </li>
+                        <li>
+                            <strong>An<em> HTML template</em></strong> that determines the UI
+                        </li>
+                        <li>
+                            <strong><em>Component-specific styles</em></strong> that define the look and feel
+                        </li>
+                    </ul>
 
             </section>
             <section 
@@ -105,7 +122,7 @@
                     <li>
                         Inside the <code class="element">div</code>, add an <code class="element">h3</code> and <code class="statement">{{ product.name }}</code>. The <code class="statement">{{ product.name }}</code> statement is an example of Angular's interpolation syntax. Interpolation <code class="syntax">{{ }}</code> lets you render the property value as text.
                     </li>
-                    <li class="bold_no-marker">
+                    <li class="list_header">
                         The preview pane updates to display the name of each product in the list.
                     </li>
                     <li>
@@ -179,7 +196,7 @@
                     <li>
                         Open <code>product-alerts.component.ts</code>. The <code class="decorator">@Component()</code> decorator indicates that the following class is a component. <code class="decorator">@Component()</code> also provides metadata about the component, including its selector, templates, and styles.
                     </li>
-                    <li class="bold_no-marker">
+                    <li class="list_header">
                         Key features in the <code class="decorator">@Component()</code> are as follows:
                         <ul>
                             <li>
@@ -221,6 +238,7 @@
                 <header>
                     <h2>Pass data to a parent component</h2>
                 </header>
+                
 
             </section>
         </main>
