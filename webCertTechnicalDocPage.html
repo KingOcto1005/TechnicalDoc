@@ -8,6 +8,7 @@
 
         body {
             background-color:rgb(29, 157, 140);
+            padding-top: 120px;
         }
 
         main{
@@ -15,7 +16,7 @@
             
         }
         header {
-            text-align: center;
+            padding-left: 2px
             
 
 
@@ -50,15 +51,18 @@
 
         }
 
-        nav {
+        #navbar {
 
             display: flex;
             flex-direction: row;
             align-items: center;
-            bottom: 0;
             width: 50%;
             left: 0;
+            top:0;
             background-color:rgb(25, 197, 140);
+            position: fixed;
+            
+
             
 
 
@@ -296,6 +300,7 @@
 </head>
 <body>
 
+    <main id="main-doc">
         <nav id="navbar">
             <header id="theheader">
                 <h1>Angular Setup</h1>
@@ -333,8 +338,6 @@
                 <br>
             </ul>
         </nav>
-
-    <main id="main-doc">
         <section 
         id="Prerequisites"
         class="main-section">
