@@ -134,6 +134,76 @@
                 <header>
                     <h2>Create the product list</h2>
                 </header>
+                <p>
+                    Currently, the product list displays the name and description of each product. The <code class="component-name">ProductListComponent</code> also defines a products property that contains imported data for each product from the products array in <code>products.ts</code>.
+                </p>
+                <p>
+                    The next step is to create a new alert feature that uses product data from the <code class="component-name">ProductListComponent</code>. The alert checks the product's price, and, if the price is greater than $700, displays a <strong>Notify Me</strong> button that lets users sign up for notifications when the product goes on sale.
+                </p>
+                <p>
+                    This section walks you through creating a child component, <code class="component-name">ProductAlertsComponent</code> that can receive data from its parent component, <code class="component-name">ProductListComponent</code>.
+                </p>
+                <ol>
+                    <li>
+                        Click on the plus sign above the current terminal to create a new terminal to run the command to generate the component.
+                    </li>
+                    <li>
+                        In the new terminal, generate a new component named <code>product-alerts</code> by running the following command: 
+                        
+                        <code class="command">ng generate component product-alerts</code>
+                        
+                        The generator creates starter files for the three parts of the component:
+                        <ul>
+                            <li>
+                                <code>product-alerts.component.ts</code>
+                            </li>
+                            <li>
+                                <code>product-alerts.component.html</code>
+                            </li>
+                            <li>
+                                <code>product-alerts.component.css</code>
+                            </li>
+                        
+                        </ul>
+                    </li>
+                    <li>
+                        Open <code>product-alerts.component.ts</code>. The <code class="decorator">@Component()</code> decorator indicates that the following class is a component. <code class="decorator">@Component()</code> also provides metadata about the component, including its selector, templates, and styles.
+                    </li>
+                    <li class="bold_no-marker">
+                        Key features in the <code class="decorator">@Component()</code> are as follows:
+                        <ul>
+                            <li>
+                                The <code class="selector">selector</code>, <code class="selector">app-product-alerts</code>, identifies the component. By convention, Angular component selectors begin with the prefix <code class="selector">app-</code>, followed by the component name.
+                            </li>
+                            <li>
+                                The template and style filenames reference the component's HTML and CSS
+                            </li>
+                            <li>
+                                The <code class="decorator">@Component()</code> definition also exports the class, <code class="component-name">ProductAlertsComponent</code>, which handles functionality for the component.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        To set up <code class="component-name">ProductAlertsComponent</code> to receive product data, first import <em><strong>Input</strong></em> from <code class="import">@angular/core</code>.
+                    </li>
+                    <li>
+                        In the <code>ProductAlertsComponent</code> class definition, define a property named product with an <code class="decorator">@Input()</code> decorator. The <code class="decorator">@Input()</code> decorator indicates that the property value passes in from the component's parent, <code class="component-name">ProductListComponent</code>.
+                    </li>
+                    <li>
+                        Open <code>product-alerts.component.html</code> and replace the placeholder paragraph with a <strong>Notify Me</strong> button that appears if the product price is over $700.
+                    </li>
+                    <li>
+                        The generator automatically added the <code class="component-name">ProductAlertsComponent</code> to the <code class="module">AppModule</code> to make it available to other components in the application.
+                    </li>
+                    <li>
+                        Finally, to display <code class="component-name">ProductAlertsComponent</code> as a child of <code class="component-name">ProductListComponent</code>, add the <code class="selector">app-product-alerts</code> element to <code>product-list.component.html</code>. Pass the current product as input to the component using property binding.
+                    </li>
+                </ol>
+                <ul>
+                    <li>
+                        The new product alert component takes a product as input from the product list. With that input, it shows or hides the <strong>Notify Me</strong> button, based on the price of the product. The Phone XL price is over $700, so the <strong>Notify Me</strong> button appears on that product.
+                    </li>
+                </ul>
 
             </section>
             <section 
