@@ -83,7 +83,50 @@
                 <header>
                     <h2>Example application start</h2>
                 </header>
-
+                <p>
+                    In this section, you'll update the application to display a list of products. You'll use predefined product data from the products.ts file and methods from the <code>product-list.component.ts</code> file. This section guides you through editing the HTML, also known as the template.
+                </p>
+                <ol>
+                    <li>
+                        In the <code>product-list</code> folder, open the template file <code>product-list.component.html</code>.
+                    </li>
+                    <li>Add an <code class="directive">*ngFor</code> structural directive on a <code class="element">div</code>, as follows:
+                        <br>
+                        With <code class="directive">*ngFor</code>, the <code class="element">div</code> repeats for each product in the list. Structural directives shape or reshape the DOM's structure, by adding, removing, and manipulating elements. For more information about structural directives, see <a href="#">Structural directives</a>.
+                    </li>
+                    <li>
+                        Inside the <code class="element">div</code>, add an <code class="element">h3</code> and <code class="statement">{{ product.name }}</code>. The <code class="statement">{{ product.name }}</code> statement is an example of Angular's interpolation syntax. Interpolation <code class="syntax">{{ }}</code> lets you render the property value as text.
+                    </li>
+                    <li class="bold_no-marker">
+                        The preview pane updates to display the name of each product in the list.
+                    </li>
+                    <li>
+                        To make each product name a link to product details, add the <code class="element">a</code> element around <code class="statement">{{ product.name }}</code>.
+                    </li>
+                    <li>
+                        Set the title to be the product's name by using the property binding <code class="syntax">[ ]</code> syntax, as follows:
+                    </li>
+                    <li>
+                        In the preview pane, hover over a product name to see the bound name property value, which is the product name plus the word "details". Property binding <code class="syntax">[ ]</code> lets you use the property value in a template expression.
+                    </li>
+                    <li>
+                        Add the product descriptions. On a <code class="element">p</code> element, use an <code class="directive">*ngIf</code> directive so that Angular only creates the <code class="element">p</code> element if the current product has a description. The application now displays the name and description of each product in the list. Notice that the final product does not have a description paragraph. Angular doesn't create the <code class="element">p</code> element because the product's description property is empty.
+                    </li>
+                    <li>
+                        Add a button so users can share a product. Bind the button's click event to the <code class="method">share()</code> method in <code>product-list.component.ts</code>. Event binding uses a set of parentheses, <code class="syntax">( )</code>, around the event, as in the <code class="event">(click)</code> event on the <code class="element">button</code> element.
+                    </li>
+                </ol>
+                <ul>
+                    <li>
+                        Each product now has a <strong>Share</strong> button.
+                    </li>
+                    <li>
+                        Clicking the <strong>Share</strong> button triggers an alert that states, "The product has been shared!".
+                    </li>
+                    <li>
+                        In editing the template, you have explored some of the most popular features of Angular templates. For more information, see <a href="#">Introduction to components and templates</a>.
+                    </li>
+                </ul>
             </section>
             <section 
             id="Create_the_product_list" 
