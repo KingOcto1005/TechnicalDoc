@@ -4,6 +4,103 @@
         <title>
             Technical Documentation
         </title>
+
+        <style>
+
+                body {
+                    margin: 0;
+                    left:0;
+                    background-color: antiquewhite;
+                }
+                
+
+                #navbar {
+                    position: fixed;
+                    left:0px;
+                    top:0px;
+                    height: 100vh;
+                    width: 25vw;
+                    overflow-y:auto !important;
+                    overflow-x:hidden !important;
+                    background-color: navy;
+
+                }
+            
+                #nav-list {
+
+                    
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+
+                    
+                    
+                    
+
+                }
+
+
+
+    
+                .nav-item, a,h1 {
+                    display: block;
+                    font-size: 1em;
+                    padding: 10px;
+                    
+                    
+                }
+
+
+    
+                a,h1 {
+                    color: yellowgreen;
+                }
+    
+                a:visited {
+                    color: rgb(255, 153, 0);
+                }
+    
+                #main-doc,footer {
+                    margin-left: 25vw;
+                    padding-left: 3em;
+                    padding-right: 3em;
+                    font-size: 2em;
+                    line-height: 2em;
+                }
+
+                #source_link {
+                    text-align: center;
+                }
+            
+
+
+
+            @media screen and (max-width: 815px) {
+                #navbar {
+                    position: fixed;
+                    top:0px;
+                    left:0px;
+                    width: 25vw;
+                    float: left;
+                    font-size: smaller;
+                }
+
+                .nav-item {
+                    font-size: smaller;
+                }
+
+                main,footer {
+                    padding-right: 6em;
+                    margin-right: 6em;
+                    padding-left: 2em;
+                    
+                }
+
+                h1{
+                    font-size: smaller;
+                }
+            }
+        </style>
     </head>
     <body>
         <nav id="navbar">
@@ -51,12 +148,14 @@
             </ul>
         </nav>
         <main id="main-doc">
+            
             <section 
             id="Prerequisites" 
             class="main-section">
                 <header>
                     <h2>Prerequisites</h2>
                 </header>
+                <p>This documentation discusses creating an Angular application.</p>
                 <p>
                     To get the most out of this tutorial you should already have a basic understanding of the following:
                 </p>
@@ -276,10 +375,16 @@
                             Click the <strong>Notify Me</strong> button to trigger an alert which reads, "You will be notified when the product goes on sale".
                         </li>
                     </ol>
+                    <p>The End!!!!!</p>
             </section>
         </main>
         <footer>
-            For more information on communication between components, see <a href="#">Component Interaction</a>.
+            <p>
+                For more information on communication between components, see <a href="#">Component Interaction</a>.
+            </p>
+            <p>
+                <a id="source_link" href="https://angular.io/start">Link to source documentation</a>
+            </p>
         </footer>
     </body>
 </html>
